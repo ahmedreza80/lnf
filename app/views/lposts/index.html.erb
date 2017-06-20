@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lposts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tittle</th>
+      <th>Description</th>
+      <th>Location</th>
+      <th>Contact</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lposts.each do |lpost| %>
+      <tr>
+        <td><%= lpost.tittle %></td>
+        <td><%= lpost.description %></td>
+        <td><%= lpost.location %></td>
+        <td><%= lpost.Contact %></td>
+        <td><%= link_to 'Show', lpost %></td>
+        <td><%= link_to 'Edit', edit_lpost_path(lpost) %></td>
+        <td><%= link_to 'Destroy', lpost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lpost', new_lpost_path %>

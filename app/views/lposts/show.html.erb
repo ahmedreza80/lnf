@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tittle:</strong>
+  <%= @lpost.tittle %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @lpost.description %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @lpost.location %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @lpost.Contact %>
+</p>
+
+<p>
+  <%= image_tag(@lpost.cover) %>
+</p>
+
+<%= link_to 'Edit', edit_lpost_path(@lpost) %> |
+<%= link_to 'Back', lposts_path %>
